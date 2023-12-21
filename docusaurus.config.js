@@ -6,12 +6,12 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "aelfinity workshop",
-  tagline: "aelfinity workshop documentation",
+  title: "aelf docs",
+  tagline: "aelf documentation",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://portkey-workshop-contracts-demo.vercel.app",
+  url: "https://docs.aelf.dev",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
@@ -53,7 +53,7 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "aelfinity workshop",
+        title: "aelf docs",
       },
       footer: {
         style: "dark",
@@ -67,47 +67,8 @@ const config = {
               },
             ],
           },
-          {
-            title: "Token",
-            items: [
-              {
-                label: "Create Token",
-                to: "/docs/create-token",
-              },
-            ],
-          },
-          {
-            title: "UI",
-            items: [
-              {
-                label: "Portkey Sign In",
-                to: "/docs/sign-in",
-              },
-              {
-                label: "Get Balance",
-                to: "/docs/get-balance",
-              },
-              {
-                label: "Get NFT",
-                to: "/docs/get-nft",
-              },
-            ],
-          },
-          {
-            title: "Smart Contract",
-            items: [
-              {
-                label: "Smart Contract",
-                to: "/docs/smart-contract",
-              },
-              {
-                label: "Frontend",
-                to: "/docs/smart-contract-frontend",
-              },
-            ],
-          },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} aelfinity workshop.`,
+        copyright: `Copyright © ${new Date().getFullYear()} aelf`,
       },
       prism: {
         additionalLanguages: ["csharp", "protobuf", "powershell"],

@@ -4,7 +4,13 @@ sidebar_position: 3
 
 # Portkey Sign In
 
-## 1. Create a sample project using react
+## 1. Introduction
+
+Portkey is the first AA wallet from aelf's ecosystem, migrating users, developers and projects from Web2 to Web3 with DID solution.
+
+The following example demonstrates how to integrate with Portkey wallet using `@portkey/detect-provider` npm package.
+
+## 2. Create a sample project using react
 
 In a terminal:
 
@@ -18,7 +24,7 @@ Enter the project folder.
 cd my-app
 ```
 
-## 2. Install SDKs
+## 3. Install SDKs
 
 ```bash copy
 npm install @portkey/detect-provider aelf-sdk
@@ -29,9 +35,9 @@ npm install @portkey/detect-provider aelf-sdk
 | @portkey/detect-provider | This library allows the developer to interact with the Portkey chrome extension.                                                |
 | aelf-sdk                 | aelf-sdk.js is a collection of libraries which allow you to interact with a local or remote aelf node, using a HTTP connection. |
 
-## 3. Integrate SignIn Component
+## 4. Integrate SignIn Component
 
-### 3.1 Copy below sample code and replace the codes in src/App.tsx
+### 4.1 Copy below sample code and replace the codes in src/App.tsx
 
 ```tsx title="src/App.tsx" showLineNumbers
 import { useEffect, useState } from "react";
@@ -72,13 +78,13 @@ function App() {
 export default App;
 ```
 
-## 4. Start the development server
+## 5. Start the development server
 
 ```bash
 npm run dev
 ```
 
-## 5. Result
+## 6. Result
 
 Click on the `connect` button.
 
