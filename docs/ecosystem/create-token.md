@@ -1,6 +1,6 @@
 ---
-title: Create Token
-sidebar_position: 4
+title: Token Symbol Market
+sidebar_position: 3
 ---
 
 # Token Creation on AElf

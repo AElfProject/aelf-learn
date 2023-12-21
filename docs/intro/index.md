@@ -1,8 +1,9 @@
 ---
-sidebar_position: 1
+title: Introduction
+sidebar_position: 2
 ---
 
-# Introduction
+# Introduction to the aelf blockchain
 
 This is a docs site created for aelf.
 

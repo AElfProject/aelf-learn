@@ -1,6 +1,6 @@
 ---
 title: Testnet Faucet
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Accessing the aelf testnet faucet
@@ -9,7 +9,7 @@ sidebar_position: 2
 
 There is a testnet network on aelf at https://aelf-test-node.aelf.io/ which developers can use to test out their smart contracts during development.
 
-## 2 Getting testnet tokens
+## 2. Getting testnet tokens
 
 To get testnet tokens in order to pay the transaction fees required for contract deployment, you may visit https://testnet-faucet.aelf.io/:
 
