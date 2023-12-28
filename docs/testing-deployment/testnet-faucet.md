@@ -7,14 +7,15 @@ sidebar_position: 3
 
 ## 1. Introduction
 
-There is a testnet network on aelf at https://aelf-test-node.aelf.io/ which developers can use to test out their smart contracts during development.
+Developers can leverage the aelf testnet network available at https://aelf-test-node.aelf.io/ for thorough testing of their smart contracts during the development phase.
 
 ## 2. Getting testnet tokens
 
-To get testnet tokens in order to pay the transaction fees required for contract deployment, you may visit https://testnet-faucet.aelf.io/:
+To acquire testnet tokens for covering transaction fees essential for contract deployment, follow these steps at https://testnet-faucet.aelf.io/:
 
 ![faucet](/img/faucet.png)
 
-Enter your wallet address in the input field, and click the `Get Test Token` button.
+1. Input your wallet address into the designated field.
+2. Click the "Get Test Token" button to initiate the token request.
 
-If successful, 1,000 ELF will be sent to the aelf wallet address.
+Upon successful completion, a sum of 1,000 ELF will be promptly transferred to your aelf wallet address.
