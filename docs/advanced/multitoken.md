@@ -6,43 +6,38 @@ sidebar_position: 1
 
 ## Introduction
 
-The AElf FT (Fungible Token) concept is implemented through the utilization of smart contracts on the AElf blockchain 
-platform, and, in line with industry practices, employs a MultiToken contract. This contract facilitates core 
-functionalities such as `creation`, `issuance`, `transfer`, `transferFrom`, `approval`, `burning`, and `locking` of 
-tokens. In adherence to the definition of Fungible Tokens, each unit of AElf FT is interchangeable, possessing equal 
-value and functionality.
+The AElf Fungible Token (FT) concept is implemented through smart contracts on the AElf blockchain platform, utilizing 
+a MultiToken contract. This contract facilitates core functionalities, including `creation`, `issuance`, `transfer`, 
+`transferFrom`, `approval`, `burning`, and `locking` of tokens. Aligned with industry practices, AElf FT adheres to the 
+fungibility definition, ensuring each unit is interchangeable, possessing equal value and functionality.
 
-Within the AElf ecosystem, FTs represent digital assets, benefiting from the versatility and programmability offered by 
-smart contracts. The MultiToken contract enables developers to create fungible tokens tailored to specific business 
-requirements. Users can seamlessly issue new FTs, conduct secure and trustworthy transfers between participants, provide 
-additional approvals for more complex interactions, and engage in actions like burning or locking tokens when necessary. 
-This modular design ensures that the AElf FT concept is adaptable to a variety of scenarios, catering to diverse user 
-and enterprise needs.
+In the AElf ecosystem, FTs represent digital assets, benefiting from the versatility and programmability offered by 
+smart contracts. The MultiToken contract empowers developers to create customized fungible tokens tailored to specific 
+business requirements. Users can seamlessly issue new FTs, conduct secure transfers, provide approvals, and perform 
+actions like burning or locking tokens when needed. This modular design ensures adaptability to diverse scenarios, 
+meeting various user and enterprise needs.
 
 ## Functionalities of AElf MultiToken Contract
 
 ### 1. Create
 
-The `Create` functionality in the AElf MultiToken contract is a pivotal feature that enables the introduction of new 
-fungible tokens to the AElf blockchain. Through smart contracts, this functionality initiates the token creation process 
-by generating a key-value pair in the state.TokenInfo hashmap, where the key represents the token symbol and the value 
-contains essential information about the token. Symbol uniqueness is enforced, and developers benefit from a modular 
-design, allowing customization based on specific business requirements. 
+The `Create` functionality initiates the introduction of new fungible tokens to the AElf blockchain. This pivotal feature 
+generates a key-value pair in the state.TokenInfo hashmap, ensuring symbol uniqueness and allowing customization based 
+on specific business requirements.
 
 ### 2. Issue
 
-The `Issue` functionality in the AElf MultiToken contract is a core feature that facilitates the addition of a specified 
-quantity of tokens to a designated user. This functionality is essential for the initial distribution and ongoing 
-issuance of tokens within the AElf blockchain ecosystem. The user's token balance is then updated to reflect the issued 
-amount, contributing to the total token supply. 
+The `Issue` functionality adds a specified quantity of tokens to a designated user, facilitating initial distribution and 
+ongoing issuance within the AElf blockchain ecosystem. User balances are updated to reflect the issued amount, 
+contributing to the total token supply.
 
 ### 3. Transfer
 
-The AElf MultiToken contract's `Transfer` function facilitates the transfer of a specified quantity of tokens from one 
-user to another. The underlying implementation involves modifying the balances of both the sender and recipient 
-addresses, ensuring the consistency and accuracy of token transfers. This function plays a fundamental role in enabling 
-secure and efficient peer-to-peer transactions within the AElf blockchain ecosystem, enhancing the fungibility and 
-usability of the tokens managed by the MultiToken contract.
+The `Transfer` function in the AElf MultiToken contract facilitates the secure and efficient transfer of a specified 
+quantity of tokens from one user to another. This crucial functionality involves a meticulous implementation that 
+adjusts the balances of both the sender and recipient addresses. By ensuring consistency and accuracy in token 
+transfers, this function plays a fundamental role in fostering reliable peer-to-peer transactions within the AElf 
+blockchain ecosystem.
 
 ```csharp
 public override Empty Transfer(TransferInput input)
@@ -63,16 +58,18 @@ public override Empty Transfer(TransferInput input)
 
 ### 4. TransferFrom
 
-The AElf MultiToken contract's TransferFrom function extends the token transfer capability by introducing the concept of 
-an allowance, distinguishing it from the Transfer operation. For each user, spender, and token combination, the contract 
-maintains an allowance in the state, represented as a Hashmap. This map specifies the maximum quantity of a particular 
-token that the spender is authorized to transfer on behalf of the user. With each successful execution of TransferFrom, 
-the contract deducts the transferred token amount from the corresponding allowance. This functionality is particularly 
-useful in scenarios where users grant permission to a third party to manage their tokens. The TransferFrom operation 
-validates the transaction parameters, including the spender, sender, recipient, and token amount. It ensures that the 
-spender has the appropriate authorization to execute the transfer and updates the balances of the sender and recipient 
-accordingly. This feature enhances the flexibility and utility of the AElf MultiToken contract in managing token 
-transfers within the blockchain ecosystem.
+The AElf MultiToken contract's `TransferFrom` function enhances the token transfer capability by introducing the concept 
+of an allowance, setting it apart from the Transfer operation. For each user, spender, and token combination, the 
+contract maintains an allowance in the state, organized as a Hashmap. This allowance specifies the maximum quantity of 
+a particular token that the spender is authorized to transfer on behalf of the user. During the successful execution of 
+TransferFrom, the contract deducts the transferred token amount from the corresponding allowance.
+
+This functionality proves valuable in scenarios where users delegate permission to a third party for managing their 
+tokens. The TransferFrom operation meticulously validates transaction parameters, encompassing details such as the 
+spender, sender, recipient, and token amount. It ensures that the spender possesses the requisite authorization to 
+execute the transfer, subsequently updating the balances of the sender and recipient. This refined feature significantly 
+augments the flexibility and utility of the AElf MultiToken contract, providing robust management of token transfers 
+within the blockchain ecosystem.
 
 ```csharp
 public override Empty TransferFrom(TransferFromInput input)
@@ -103,12 +100,15 @@ public override Empty TransferFrom(TransferFromInput input)
 
 ### 5. Approval
 
-AElf MultiToken's `Approval` function is a critical feature that allows users to grant permission to a designated spender, 
-specifying the maximum amount of tokens the spender is authorized to transfer on their behalf. This functionality is 
-particularly useful in scenarios where users want to delegate token management to third parties, such as decentralized 
-applications (DApps) or smart contracts. The Approval operation involves updating the allowance mapping in the 
-contract's state, establishing a clear record of authorized spenders and their corresponding token limits. This 
-capability enhances the flexibility and security of token management within the AElf blockchain ecosystem.
+The `Approval` function in AElf MultiToken is a pivotal feature that empowers users to grant permission to a designated 
+spender, defining the maximum amount of tokens the spender is authorized to transfer on their behalf. This functionality 
+proves particularly valuable in scenarios where users aim to delegate token management to third parties, such as 
+decentralized applications (DApps) or smart contracts.
+
+In the execution of the `Approval` operation, the contract dynamically updates the allowance mapping in its state. This 
+process establishes a transparent record of authorized spenders along with their corresponding token limits. By doing 
+so, the AElf MultiToken contract enhances the flexibility and security of token management within the broader AElf 
+blockchain ecosystem, catering to diverse user needs and fostering a more robust and adaptable token management system.
 
 ```csharp
 public override Empty Approve(ApproveInput input)
@@ -128,12 +128,16 @@ public override Empty Approve(ApproveInput input)
 
 ### 6. Burning
 
-The burning functionality in the AElf MultiToken contract allows users to permanently remove a specified quantity of 
-tokens from circulation. The `Burn` function validates the parameters, ensuring the sender has a sufficient balance for 
-the burn operation. Upon successful execution, the contract deducts the burned tokens from the sender's balance and 
-updates the total token supply accordingly. Burning is a common feature used for various purposes, such as reducing 
-token supply, adjusting economic parameters, or implementing deflationary mechanisms. This capability enhances the 
-versatility and economic management aspects of the AElf MultiToken contract within the blockchain ecosystem.
+
+The `burning` functionality in the AElf MultiToken contract empowers users to permanently eliminate a specified quantity 
+of tokens from circulation. The Burn function diligently validates parameters, ensuring that the sender possesses a 
+sufficient balance for the burn operation. Upon successful execution, the contract deducts the burned tokens from the 
+sender's balance and meticulously updates the total token supply.
+
+`Burning` serves as a versatile feature, applied for various purposes such as reducing token supply, adjusting economic 
+parameters, or implementing deflationary mechanisms. This capability significantly enhances the versatility and economic 
+management aspects of the AElf MultiToken contract within the blockchain ecosystem, providing users and developers with 
+a powerful tool for shaping the token dynamics in alignment with diverse scenarios and requirements.
 
 ```csharp
 public override Empty Burn(BurnInput input)
@@ -154,12 +158,16 @@ public override Empty Burn(BurnInput input)
 
 ### 7. Locking
 
-The locking functionality in AElf differs from time-based locks commonly seen in other systems. When the `Lock` function 
-is called, the specified amount of tokens is transferred to a virtual address. There is no time duration set during the 
-lock. The tokens remain at the virtual address until the `Unlock` function is called, at which point the locked tokens are 
-transferred back to the user's address. This approach provides a unique mechanism where users have the ability to lock 
-and unlock tokens without the constraint of a predefined time period, offering greater flexibility in managing token 
-access within the AElf blockchain ecosystem.
+The locking functionality in AElf distinguishes itself from traditional time-based locks prevalent in other systems. 
+Upon invocation of the `Lock` function, a designated amount of tokens is seamlessly transferred to a virtual address. 
+Unlike conventional models, this locking mechanism operates without the imposition of a predefined time duration. The 
+tokens persist at the virtual address until the execution of the `Unlock` function, wherein the locked tokens are 
+gracefully returned to the user's address.
+
+This innovative approach bestows users with a distinctive capability – the freedom to lock and unlock tokens devoid of 
+the constraints imposed by a predetermined time period. This design choice enhances the flexibility in managing token 
+access within the AElf blockchain ecosystem, providing users with a powerful and adaptable tool for tailored token 
+utilization.
 
 ```csharp
 public override Empty Lock(LockInput input)
@@ -189,20 +197,18 @@ public override Empty Lock(LockInput input)
 
 ## AElf MultiToken Contract V.S. ETH ERC-20 Contract
 
-1. **Divergent Locking Mechanism**: The locking functionality in the AElf MultiToken contract differs from traditional 
-time-based locks in ERC-20 standards. In AElf, the Lock function transfers tokens to a virtual address without 
-setting a time lock. These tokens stay in the virtual address until the Unlock function is called, transferring them 
-back to the user's address. In ERC-20, time locks are typically implemented using smart contracts to restrict token 
-transfers for a specified period.
+1. **Divergent Locking Mechanism**: 
+- AElf's lock function transfers tokens to a virtual address without a time lock.
+- ERC-20 typically implements time locks using smart contracts to restrict transfers for a specified period.
 
-2. **Advanced Allowance Management with TransferFrom**: AElf MultiToken introduces the Allowance concept and 
-TransferFrom function for more flexible token transfers and permission management. This allows users to explicitly 
-authorize specific spenders to execute transfers on their behalf. In ERC-20, authorization is typically achieved 
-through the approval function, and the implementation of TransferFrom may vary between contracts.
+2. **Advanced Allowance Management with TransferFrom**: 
+- AElf introduces the Allowance concept and TransferFrom function for flexible token transfers and permission management.
+- ERC-20 achieves authorization through the approval function, with TransferFrom implementation varying between contracts.
 
-3. **Modularity and Customization**: AElf MultiToken's modular design allows it to adapt flexibly to various scenarios, 
-including user-defined features and business logic. In contrast, ERC-20 contracts have more standardized interfaces, 
-constrained by the ERC-20 standard specification, which may limit flexibility compared to AElf contracts.
+3. **Modularity and Customization**: 
+- AElf's modular design allows adaptability to various scenarios, supporting user-defined features and business logic.
+- ERC-20 contracts have more standardized interfaces, potentially limiting flexibility compared to AElf contracts.
 
-4. **Smart Contract Programming Language**: AElf smart contracts are written in C#, while ERC-20 contracts are usually 
-coded in Solidity. 
+4. **Smart Contract Programming Language**: 
+- AElf smart contracts are written in C#. 
+- ERC-20 contracts are usually coded in Solidity.
