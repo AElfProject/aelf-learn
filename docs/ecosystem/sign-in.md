@@ -25,16 +25,15 @@ Enter the project folder.
 cd my-app
 ```
 
-## 3. Install SDKs
+## 3. Install SDK
 
 ```bash copy
-npm install @portkey/detect-provider aelf-sdk
+npm install @portkey/detect-provider
 ```
 
-| Library                  | Description                                                                                                                     |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| @portkey/detect-provider | This library allows the developer to interact with the Portkey chrome extension.                                                |
-| aelf-sdk                 | aelf-sdk.js is a collection of libraries which allow you to interact with a local or remote aelf node, using a HTTP connection. |
+| Library                  | Description                                                                      |
+| ------------------------ | -------------------------------------------------------------------------------- |
+| @portkey/detect-provider | This library allows the developer to interact with the Portkey chrome extension. |
 
 ## 4. Integrate SignIn Component
 
