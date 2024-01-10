@@ -105,3 +105,5 @@ npm run dev
 Click on the `connect` button.
 
 If successful, the chrome extension should pop up requesting the user to connect to the application.
+
+To find out more usage examples of Portkey, please click [here](https://doc.portkey.finance/).
