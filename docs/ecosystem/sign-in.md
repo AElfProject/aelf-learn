@@ -7,7 +7,7 @@ sidebar_position: 4
 
 ## 1. Introduction
 
-Portkey is the first AA wallet from aelf's ecosystem, migrating users, developers and projects from Web2 to Web3 with DID solution.
+[Portkey](https://portkey.finance/) is the first AA wallet from aelf's ecosystem, migrating users, developers and projects from Web2 to Web3 with DID solution.
 
 The following example demonstrates how to integrate with Portkey wallet using `@portkey/detect-provider` npm package.
 
@@ -25,16 +25,15 @@ Enter the project folder.
 cd my-app
 ```
 
-## 3. Install SDKs
+## 3. Install SDK
 
 ```bash copy
-npm install @portkey/detect-provider aelf-sdk
+npm install @portkey/detect-provider
 ```
 
-| Library                  | Description                                                                                                                     |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| @portkey/detect-provider | This library allows the developer to interact with the Portkey chrome extension.                                                |
-| aelf-sdk                 | aelf-sdk.js is a collection of libraries which allow you to interact with a local or remote aelf node, using a HTTP connection. |
+| Library                  | Description                                                                      |
+| ------------------------ | -------------------------------------------------------------------------------- |
+| @portkey/detect-provider | This library allows the developer to interact with the Portkey chrome extension. |
 
 ## 4. Integrate SignIn Component
 
@@ -49,6 +48,7 @@ import detectProvider from "@portkey/detect-provider";
 function App() {
   const [provider, setProvider] = useState<IPortkeyProvider | null>(null);
 
+  // init function to initialise the provider
   const init = async () => {
     try {
       setProvider(await detectProvider());
@@ -57,17 +57,32 @@ function App() {
     }
   };
 
+  // if not already connected, will trigger the popup from the Chrome extension
   const connect = async () => {
     await provider?.request({
       method: MethodsBase.REQUEST_ACCOUNTS,
     });
   };
 
+  // when provider has not been initialised, call the init function
   useEffect(() => {
     if (!provider) init();
   }, [provider]);
 
-  if (!provider) return <>Provider not found.</>;
+  if (!provider)
+    return (
+      <>
+        Portkey extension not found. Please download{" "}
+        <a
+          href="https://chromewebstore.google.com/detail/portkey-wallet-crypto-gam/hpjiiechbbhefmpggegmahejiiphbmij?hl=en-GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </a>
+        .
+      </>
+    );
 
   return (
     <>
