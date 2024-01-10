@@ -69,7 +69,20 @@ function App() {
     if (!provider) init();
   }, [provider]);
 
-  if (!provider) return <>Provider not found.</>;
+  if (!provider)
+    return (
+      <>
+        Portkey extension not found. Please download{" "}
+        <a
+          href="https://chromewebstore.google.com/detail/portkey-wallet-crypto-gam/hpjiiechbbhefmpggegmahejiiphbmij?hl=en-GB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </a>
+        .
+      </>
+    );
 
   return (
     <>
