@@ -48,6 +48,7 @@ import detectProvider from "@portkey/detect-provider";
 function App() {
   const [provider, setProvider] = useState<IPortkeyProvider | null>(null);
 
+  // init function to initialise the provider
   const init = async () => {
     try {
       setProvider(await detectProvider());
@@ -56,12 +57,14 @@ function App() {
     }
   };
 
+  // if not already connected, will trigger the popup from the Chrome extension
   const connect = async () => {
     await provider?.request({
       method: MethodsBase.REQUEST_ACCOUNTS,
     });
   };
 
+  // when provider has not been initialised, call the init function
   useEffect(() => {
     if (!provider) init();
   }, [provider]);
