@@ -7,7 +7,7 @@ sidebar_position: 4
 
 ## 1. Introduction
 
-Portkey is the first AA wallet from aelf's ecosystem, migrating users, developers and projects from Web2 to Web3 with DID solution.
+[Portkey](https://portkey.finance/) is the first AA wallet from aelf's ecosystem, migrating users, developers and projects from Web2 to Web3 with DID solution.
 
 The following example demonstrates how to integrate with Portkey wallet using `@portkey/detect-provider` npm package.
 
