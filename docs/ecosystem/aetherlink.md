@@ -90,7 +90,7 @@ The AetherLink Data Feeds Coordinator provides a quick and reliable connection f
 encompassing data types like asset prices, reserve balances, NFT floor prices, and L2 sequencer health.
 
 Data feeds from the Coordinator include Price Feeds, Proof of Reserve Feeds, NFT Floor Price Feeds, Rate and Volatility 
-Feeds, and L2 sequencer uptime feeds. For example, Price Feeds are crucial for real-time actions in applications like 
+Feeds, and L2 Sequencer Uptime Feeds. For example, Price Feeds are crucial for real-time actions in applications like 
 decentralized finance (DeFi) platforms. These feeds aggregate data from multiple sources, ensuring reliability through 
 the Decentralized Data Model and Offchain Reporting.
 
