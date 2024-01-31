@@ -106,15 +106,11 @@ sequencer uptime feeds track the last known status of the sequencer on Layer 2 n
 
 To achieve these functionalities, AElf has deployed 3 main contracts. Their names and their functionalities are:
 
-| Contract Type     | Functions and Responsibilities                        |
-|-------------------|-------------------------------------------------------|
-| Consumer Contract  | 1. Task initiation and receipt of results             |
-|                   | 2. Result inquiry                                     |
-| Coordinate Contract| 1. Task management                                    |
-|                   | 2. VRF Proof verification and random number generation|
-|                   | 3. Threshold signature verification                   |
-| Oracle Contract    | 1. Node management                                    |
-|                   | 2. Task event publication                            |
+| Contract Type       | Functions and Responsibilities                                                                                          |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| Consumer Contract   | 1. Task initiation and receipt of results<br />2. Result inquiry                                                        |
+| Coordinate Contract | 1. Task management<br />2. VRF Proof verification and random number generation<br />3. Threshold signature verification |
+| Oracle Contract     | 1. Node management<br />2. Task event publication                                                                       |
 
 ### A. Consumer Contract
 
