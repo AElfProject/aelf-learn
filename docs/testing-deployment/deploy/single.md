@@ -31,7 +31,7 @@ contracts in this hassle-free manner.
 ### 3.1 Implement acs12.proto
 
 Before deploying a contract to any AElf chain, it is essential to ensure that the contract has implemented ACS12. ACS12 
-is a standard AElf package designed to display gas fees to users. The Acs12.proto file is a prerequisite for deployment 
+is a standard AElf package designed to display gas fees to users. The acs12.proto file is a prerequisite for deployment 
 on the AElf chains.
 
 ```protobuf title="acs12.proto" showLineNumbers
