@@ -86,7 +86,7 @@ and an oracle-reported result, and then creating a set of random words based on 
 
 ### B. DataFeeds
 
-AetherLink Data Feeds Coordinator provides a quick and reliable connection for smart contracts to real-world data, 
+The AetherLink Data Feeds Coordinator provides a quick and reliable connection for smart contracts to real-world data, 
 encompassing data types like asset prices, reserve balances, NFT floor prices, and L2 sequencer health.
 
 Data feeds from the Coordinator include Price Feeds, Proof of Reserve Feeds, NFT Floor Price Feeds, Rate and Volatility 
