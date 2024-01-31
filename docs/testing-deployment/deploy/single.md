@@ -119,8 +119,7 @@ Here is how to transfer test tokens to a side chain:
 
 ### 3.3 Submit a proposal
 
-Go to https://explorer-test-side02.aelf.io/proposal/proposals , and click "Apply" (if apply button can not be found, please 
-login first), and select "Deploy/Update Contract", upload the `/<your_contract_name>.dll.patched` file in project folder
+Go to https://explorer-test-side02.aelf.io/proposal/proposals, and click "Apply" (if apply button is not visible, please login first), and select "Deploy/Update Contract", upload the `/<your_contract_name>.dll.patched` file in project folder
 
 ```bash copy
 <your_project>/src/bin/Debug/net6.0
