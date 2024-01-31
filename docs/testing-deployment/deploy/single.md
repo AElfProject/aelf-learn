@@ -112,8 +112,7 @@ dotnet build
 Go to https://explorer-test-side02.aelf.io/proposal/proposals and login with your [Portkey](https://portkey.finance/) wallet account, and transfer some tokens to 
 sidechain as the smart contract will be deployed on sidechain.
 
-If you haven't don't have test tokens on your account, you may go to https://testnet-faucet.aelf.io/ to get some free 
-test tokens.
+If you do not have ELF tokens in your account on testnet, you may visit the [Testnet Faucet](https://testnet-faucet.aelf.io/) to get some free ELF testnet tokens.
 
 Here is how to transfer test tokens to a side chain:
 ![transfer](transfer.gif)
