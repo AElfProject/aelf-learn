@@ -10,7 +10,7 @@ sidebar_position: 1
 AElf empowers users to seamlessly deploy smart contracts onto the AElf blockchain using the AElf Explorer. This 
 user-friendly platform allows individuals to deploy contracts directly onto the main chain or side chains through the 
 Explorer interface. With the AElf Explorer, users can efficiently interact with and deploy smart contracts, contributing 
-to a more accessible and streamlined blockchain development experience on the AElf ecosystem
+to a more accessible and streamlined blockchain development experience on the AElf ecosystem.
 
 ## 2. AElf explorer address
 
