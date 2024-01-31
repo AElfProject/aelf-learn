@@ -8,7 +8,7 @@ sidebar_position: 2
 ## 1. Introduction
 
 The AElf blockchain explorer serves as a primary tool for monitoring and searching information on the main chain and its 
-side chains. Through the aelf blockchain explorer, users can:
+side chains. Through the AElf blockchain explorer, users can:
 1. View basic data such as transactions per minute, block height, total transactions, total accounts, application 
 quantity, side chain quantity, and more.
 2. Query specific information related to block height, transaction ID, and addresses.
