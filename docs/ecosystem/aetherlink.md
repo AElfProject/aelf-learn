@@ -24,7 +24,7 @@ foundational services for oracle mechanisms.
 In this context, AetherLink, AElf's proprietary oracle service, has been developed. AetherLink primarily focuses on 
 providing Verified Random Function (VRF) capabilities and Data Feeds functionality.
 
-## 3. What can AetherLink do
+## 3. What can AetherLink do?
 
 ### A. Random number generator
 
