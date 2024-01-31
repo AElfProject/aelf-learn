@@ -16,7 +16,7 @@ to real-world data but also enable the retrieval of information from other block
 
 ## 2. AElf Oracle Services - AetherLink
 
-Among the various products in AELF, some products may require information from other chains. For example, the ebridge 
+Among the various products in AElf, some products may require information from other chains. For example, the [eBridge](https://ebridge.exchange/) 
 product needs to access lock-up information of NFTs on the Ethereum chain. This necessitates the use of oracle services 
 for data interchange. To expand the AELF ecosystem and enhance user services, it is essential to establish the 
 foundational services for oracle mechanisms.
