@@ -83,6 +83,7 @@ import "aelf/core.proto";
 import "aelf/options.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/wrappers.proto";
+// highlight-next-line
 import "Protobuf/reference/acs12.proto";
 // The namespace of this class
 option csharp_namespace = "AElf.Contracts.HelloWorld";
