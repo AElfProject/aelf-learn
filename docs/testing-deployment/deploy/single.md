@@ -109,7 +109,7 @@ dotnet build
 
 ### 3.2 Get test tokens for deployment
 
-Go to https://explorer-test-side02.aelf.io/proposal/proposals and login portkey account, and transfer some tokens to 
+Go to https://explorer-test-side02.aelf.io/proposal/proposals and login with your [Portkey](https://portkey.finance/) wallet account, and transfer some tokens to 
 sidechain as the smart contract will be deployed on sidechain.
 
 If you haven't don't have test tokens on your account, you may go to https://testnet-faucet.aelf.io/ to get some free 
