@@ -68,8 +68,7 @@ The scenario-based operations in the AElf blockchain explorer are as follows:
 
 ##### (1) Applying to Become a Candidate Node
 
-Users want to become a production node on AElf, participate in block production, and maintain the orderly operation of 
-the entire AElf ecosystem. At this point, users need to apply to become a node on the AElf blockchain explorer.
+A node operator wants their node to become a production node on AElf, participate in block production, and maintain the orderly operation of the entire AElf ecosystem. At this point, the node owner needs to apply for their node to become a production node on the aelf blockchain. This can be done using the AElf blockchain explorer.
 
 Node Application Steps:
 
