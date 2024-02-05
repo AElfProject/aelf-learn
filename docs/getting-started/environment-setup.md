@@ -22,3 +22,11 @@ To use the template locally, install the following:
 # Start Docker
 
 Ensure that Docker is running (if not, start Docker).
+
+# Open project folder in VS Code
+
+Open the project folder in VS Code.
+
+Next, press `F1` and enter `reopen`, then choose `Dev Containers: Reopen in Container`.
+
+Wait while the environment loads.
