@@ -51,3 +51,11 @@ Under the Summary, you can view details of the contract:
 | View deployed contract on AElf Explorer | Link to view the contract on AElf Explorer.          |
 
 ![github actions deploy summary](/img/github-actions-deploy-summary.png)
+
+### Error handling
+
+Sometimes one of the build steps fails, to retry, click on the refresh button next to the failed step, then click on "Re-run jobs":
+
+![proposal action failed](/img/proposal-action-failed.png)
+
+If the step continues to fail, view the logs to determine the cause of the issue, and the steps to resolve it.
