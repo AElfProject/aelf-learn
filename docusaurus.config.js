@@ -62,8 +62,8 @@ const config = {
             title: "Home",
             items: [
               {
-                label: "Intro",
-                to: "/docs/intro",
+                label: "Getting Started",
+                to: "/docs/getting-started",
               },
             ],
           },
