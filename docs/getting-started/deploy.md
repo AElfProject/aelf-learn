@@ -17,9 +17,20 @@ To use the workflow, ensure that you have [configured](https://docs.github.com/e
 
 ![repository secrets](/img/repository-secrets.png)
 
+To generate a private key and wallet address, use `aelf-command`:
+
+```bash
+aelf-command create
+```
+
 ### Triggering the workflow
 
-The workflow is triggered whenever changes are detected in the `src/` path.
+The workflow is triggered whenever a new tag is pushed:
+
+```bash
+git tag v1.0.0
+git push --tags
+```
 
 Refer to [Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows) for more information on how to customise this.
 
@@ -40,3 +51,11 @@ Under the Summary, you can view details of the contract:
 | View deployed contract on AElf Explorer | Link to view the contract on AElf Explorer.          |
 
 ![github actions deploy summary](/img/github-actions-deploy-summary.png)
+
+### Error handling
+
+Sometimes one of the build steps fails, to retry, click on the refresh button next to the failed step, then click on "Re-run jobs":
+
+![proposal action failed](/img/proposal-action-failed.png)
+
+If the step continues to fail, view the logs to determine the cause of the issue, and the steps to resolve it.
