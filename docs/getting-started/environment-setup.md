@@ -10,7 +10,24 @@ Click on the `Use this template` button and choose `Create a new repository`.
 
 Type a suitable repository name and click `Create repository`.
 
-Clone this repository to your local working directory.
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="codespaces" label="GitHub Codespaces" default>
+
+Within the GitHub interface, click on `Code`, then choose `Codespaces`.
+
+Click on the plus "+" sign to create a new Codespace.
+
+After a moment, your workspace will load with the contents of the repository, and you will be able to continue your development using GitHub Codespaces.
+
+![codespaces](/img/codespaces.png)
+
+  </TabItem>
+  <TabItem value="local" label="Local development">
+
+Clone your repository to your local working directory.
 
 # Install required software
 
@@ -30,3 +47,5 @@ Open the project folder in VS Code.
 Next, press `F1` and enter `reopen`, then choose `Dev Containers: Reopen in Container`.
 
 Wait while the environment loads.
+</TabItem>
+</Tabs>
