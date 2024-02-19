@@ -95,3 +95,9 @@ Try to build the new code:
 cd src
 dotnet build
 ```
+
+### Commit your changes
+
+At this point, you may want to commit (save) your changes. To do so, click on the "Source Control" icon on the left, and enter a meaningful commit message, then click on `Commit` (hit Yes on the prompt if you wish to include all changes).
+
+![commit](/img/repository-commit.png)
