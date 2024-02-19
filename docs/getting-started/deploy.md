@@ -23,6 +23,12 @@ To generate a private key and wallet address, use `aelf-command`:
 aelf-command create
 ```
 
+### Getting testnet tokens
+
+Ensure that you have sufficient testnet tokens in your wallet sidechain address.
+
+To do so, use [Portkey](https://portkey.finance) wallet to transfer to your wallet address: `ELF_WALLETADDRESS_tDVW`.
+
 ### Triggering the workflow
 
 The workflow is triggered whenever a new tag is pushed:
