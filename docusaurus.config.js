@@ -9,6 +9,8 @@ const config = {
   title: "aelf docs",
   tagline: "aelf documentation",
   favicon: "img/favicon.ico",
+  organizationName: 'zhifenglee-aelf',
+  projectName: 'aelf-docs',
 
   // Set the production url of your site here
   url: "https://learn.aelf.dev",
@@ -37,6 +39,10 @@ const config = {
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
+        },
+        gtag: {
+          trackingID: 'G-8DBGWWDN7W',
+          anonymizeIP: true,
         },
       }),
     ],
