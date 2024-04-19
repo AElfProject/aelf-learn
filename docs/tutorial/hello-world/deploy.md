@@ -1,8 +1,7 @@
 ---
-sidebar_position: 10
+sidebar_position: 4
 ---
-
-# Deploy the smart contract
+# Smart Contract Deployment
 
 ## Using GitHub Actions
 
@@ -46,15 +45,16 @@ To view details of a deployment, click on the Actions tab in the GitHub UI, then
 
 Under the Summary, you can view details of the contract:
 
-| Item                                    | Description                                          |
-| --------------------------------------- | ---------------------------------------------------- |
-| transactionId                           | The id of the transaction `DeployUserSmartContract`. |
-| proposalId                              | The id of the proposal.                              |
-| View proposal on AElf Explorer          | Link to view the proposal on AElf Explorer.          |
-| isContractDeployed                      | Whether the contract has been deployed.              |
-| status                                  | The status of the proposal.                          |
-| Deployed Contract Address               | The address of the deployed contract.                |
-| View deployed contract on AElf Explorer | Link to view the contract on AElf Explorer.          |
+
+| Item                                    | Description                                         |
+| --------------------------------------- | --------------------------------------------------- |
+| transactionId                           | The id of the transaction`DeployUserSmartContract`. |
+| proposalId                              | The id of the proposal.                             |
+| View proposal on AElf Explorer          | Link to view the proposal on AElf Explorer.         |
+| isContractDeployed                      | Whether the contract has been deployed.             |
+| status                                  | The status of the proposal.                         |
+| Deployed Contract Address               | The address of the deployed contract.               |
+| View deployed contract on AElf Explorer | Link to view the contract on AElf Explorer.         |
 
 ![github actions deploy summary](/img/github-actions-deploy-summary.png)
 

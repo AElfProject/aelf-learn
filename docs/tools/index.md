@@ -1,4 +1,4 @@
 ---
-title: IDE support and tools
-sidebar_position: 6
+title: Tools
+sidebar_position: 3
 ---
