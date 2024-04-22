@@ -36,18 +36,18 @@ After a moment, your workspace will load with the contents of the repository, an
 
 Clone your repository to your local working directory.
 
-### Install Required Software
+**Install Required Software**
 
 To use the template locally, install the following:
 
 - [Docker](https://www.docker.com/get-started/)
 - [VS Code](https://code.visualstudio.com/)
 
-### Start Docker
+**Start Docker**
 
 Ensure that Docker is running (if not, start Docker).
 
-### Open Project Folder in VS Code
+**Open Project Folder in VS Code**
 
 Open the project folder in VS Code.
 
@@ -71,14 +71,6 @@ dotnet new aelf -n HelloWorld
 
 Now that we understand how a smart contract for aelf is written, suppose we want to modify the default example to implement our own contract logic.
 
-### Modify the Example
-
-Suppose we want to capture the number of calls to the `Update` method.
-
-#### State Changes
-
-Edit the file `src/HelloWorldState.cs`:
-
 ```csharp
 using AElf.Sdk.CSharp.State;
 
@@ -94,29 +86,7 @@ namespace AElf.Contracts.HelloWorld
 }
 ```
 
-Edit the file `src/Protobuf/contract/hello_world_contract.proto`:
-
-```protobuf
-// other code...
-
-service HelloWorld {
-  // other code...
-
-  // highlight-start
-  rpc Update (google.protobuf.StringValue) returns (google.protobuf.Empty) {
-  }
-  rpc Read (google.protobuf.Empty) returns (google.protobuf.StringValue) {
-    option (aelf.is_view) = true;
-  }
-  // highlight-end
-
-  // other code...
-}
-
-// other code...
-```
-
-Edit the file `src/HelloWorld.cs` to add the method implementation:
+The implementation of file `src/HelloWorld.cs` is as follows:
 
 ```csharp
 // other code...
@@ -150,8 +120,6 @@ namespace AElf.Contracts.HelloWorld
 }
 ```
 
-#### Build the New Contract
-
 Try to build the new code:
 
 ```bash
@@ -159,38 +127,14 @@ cd src
 dotnet build
 ```
 
-[//]: # (![commit]&#40;/img/repository-commit.png&#41;)
+## Creating Your Wallet
 
-## Deploying Your Smart Contract
+To send transactions on the aelf blockchain, you must have a wallet.
 
-The smart contract needs to be deployed on the chain before users can use it.
-
-### Deployment
-
-Run this command to deploy a contract.
+Run this command to create aelf wallet.
 
 ```
-aelf-local -a <Wallet_Address> -p <Wallet_Password> -c <Contract_Path>/<Contract_File>.dll.patched
-```
-
-Wait about 1-2 minutes. If deployment is successful, it will return the contract address.
-
-![result](/img/deploy-result.png)
-
-## Interacting with Your Deployed Smart Contract
-
-To call methods on your newly-deployed smart contract, use `aelf-command`:
-
-Using `Update` method to set message.
-
-```bash
-aelf-command send $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e $ENDPOINT Update 
-```
-
-Using `Read` method to get message.
-
-```bash
-aelf-command call $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e $ENDPOINT Read 
+aelf-command create
 ```
 
 ## Acquiring Testnet Tokens for Development
@@ -204,4 +148,37 @@ Run this command to get token from faucet.
 curl --location 'https://faucet.aelf.dev/api/app/send-token-info' \
 --header 'Content-Type: application/json' \
 --data '{"walletAddress": "aaa"}'
+```
+
+## Deploying Your Smart Contract
+
+The smart contract needs to be deployed on the chain before users can use it.
+
+Run this command to deploy a contract.
+
+```
+aelf-local -a <Wallet_Address> -p <Wallet_Password> -c <Contract_Path>/<Contract_File>.dll.patched
+```
+
+Wait about 1-2 minutes. If deployment is successful, it will return the contract address.
+
+![result](/img/deploy-result.png)
+
+## Interacting with Your Deployed Smart Contract
+
+Using `aelf-command` to call methods on your newly-deployed smart contract.
+
+
+First of all, using `Update` method to set message. we run the following command,
+and enter the message argument as `test`. Then `test` will be set into the message variable.
+
+```bash
+aelf-command send $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e $ENDPOINT Update 
+```
+
+After that, using `Read` method to retrieve the value previously set for the message variable.
+Then the value should be `test`.
+
+```bash
+aelf-command call $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e $ENDPOINT Read 
 ```
