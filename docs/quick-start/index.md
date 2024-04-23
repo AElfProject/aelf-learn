@@ -57,7 +57,7 @@ Wait while the environment loads.
 </TabItem>
 </Tabs>
 
-## Configuring Your Smart Contract Project
+## Starting Your Smart Contract Project
 
 In VS Code, open a new terminal `Terminal > New Terminal`.
 
@@ -67,7 +67,7 @@ Enter the following command to generate a new project:
 dotnet new aelf -n HelloWorld
 ```
 
-## Creating Your Smart Contract Code
+## Adding Your Smart Contract Code
 
 Now that we understand how a smart contract for aelf is written, suppose we want to modify the default example to implement our own contract logic.
 
@@ -127,7 +127,9 @@ cd src
 dotnet build
 ```
 
-## Creating Your Wallet
+## Preparing for deployment
+
+### Create Wallet
 
 To send transactions on the aelf blockchain, you must have a wallet.
 
@@ -137,18 +139,37 @@ Run this command to create aelf wallet.
 aelf-command create
 ```
 
-## Acquiring Testnet Tokens for Development
+### Acquiring Testnet Tokens for Development
 
 Developers can leverage the aelf testnet network available at https://aelf-test-node.aelf.io/ for thorough testing of their smart contracts during the development phase.
 To acquire testnet tokens for covering transaction fees essential for contract deployment.
 
+<Tabs>
+  <TabItem value="Use Command" label="Use Command" default>
+
 Run this command to get token from faucet.
 
 ```
-curl --location 'https://faucet.aelf.dev/api/app/send-token-info' \
+curl --location 'https://faucet.aelf.dev/api/claim' \
 --header 'Content-Type: application/json' \
---data '{"walletAddress": "aaa"}'
+--data '{"walletAddress": "Your wallet address"}'
 ```
+
+```
+curl --location 'https://faucet.aelf.dev/api/claim-seed' \
+--header 'Content-Type: application/json' \
+--data '{"walletAddress": "Your wallet address"}'
+```
+
+</TabItem>
+  <TabItem value="Use GUI" label="Use GUI">
+
+Go to this url [https://faucet-ui-preview.vercel.app](https://faucet-ui-preview.vercel.app). Enter your address and click ``Get Tokens``.
+
+![result](/img/get-token-ui.png)
+
+</TabItem>
+</Tabs>
 
 ## Deploying Your Smart Contract
 
