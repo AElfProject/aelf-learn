@@ -129,7 +129,7 @@ dotnet build
 
 ## Preparing for deployment
 
-### Create Wallet
+### Creating Your Wallet
 
 To send transactions on the aelf blockchain, you must have a wallet.
 
