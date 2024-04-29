@@ -66,8 +66,8 @@ const config = {
             title: "Home",
             items: [
               {
-                label: "Getting Started",
-                to: "/docs/getting-started",
+                label: "Quick Start",
+                to: "/docs/quick-start",
               },
             ],
           },
