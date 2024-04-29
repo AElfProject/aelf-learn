@@ -6,8 +6,7 @@ sidebar_position: 1
 
 ## 1. Introduction
 
-This documentation will guide you on how to develop the aelf smart contract, and it uses the HelloWorldContract as an example.
-With the concepts presented in this article, you will be able to create your own basic contract.
+This guide teaches you how to create aelf smart contracts, using the example of the HelloWorldContract. By following the instructions here, you'll learn to make your own basic contracts and interact with it on-chain.
 
 ## 2. Setting Up Your Development Environment
 
@@ -59,7 +58,7 @@ Wait while the environment loads.
 
 ## 3. Starting Your Smart Contract Project
 
-In VS Code, open a new terminal `Terminal > New Terminal`.
+Open your `Terminal`.
 
 Enter the following command to generate a new project:
 
