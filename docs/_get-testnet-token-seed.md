@@ -1,4 +1,14 @@
-**CLI**
+Acquire testnet SEED for creating fungible or non-fungible tokens on aelf testnet.
+
+**Get ELF Seed**
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="cli" label="CLI" default>
+
+Run this command to get seed from faucet.
 
 ```
 curl --location 'https://faucet.aelf.dev/api/claim-seed' \
@@ -6,8 +16,12 @@ curl --location 'https://faucet.aelf.dev/api/claim-seed' \
 --data '{"walletAddress": "Your wallet address"}'
 ```
 
-**GUI**
+  </TabItem>
+  <TabItem value="web" label="Web" default>
 
-Go to this url [https://faucet-ui-preview.vercel.app](https://faucet-ui-preview.vercel.app). Enter your address and click ``Get Tokens``.
+Go to this url [https://faucet-ui-preview.vercel.app](https://faucet-ui-preview.vercel.app). Click on the switch to toggle to "Seed". Enter your address and click `Get Seed`.
 
-![result](/img/get-token-ui.png)
+![result](/img/get-testnet-seed.png)
+
+  </TabItem>
+</Tabs>
