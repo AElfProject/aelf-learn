@@ -9,6 +9,7 @@ sidebar_position: 2
 This exercise will guide you through building a **Voting dApp** designed to simulate the experience of actively participating in Decentralized Autonomous Organizations **(DAOs)** governance. As a member, you'll gain hands-on experience with the entire process: Create Proposals, View Proposals, Vote on Proposals.
 
 ## Voting dApp Backend Overview
+
 Here are the backend functionalities that we will be implementing as shown below:
 
 <p align="center">
@@ -28,3 +29,7 @@ As official members of the DAO, users will then be empowered to:
 - **Vote on Proposals** where members are able to cast their votes on various proposals influencing the direction and decisions of the DAO!
 
 Now that you have a better understanding of the functionalities of the Voting dApp that you will be building, we are now ready to set up the project!
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

@@ -4,11 +4,6 @@ sidebar_position: 1
 
 # Preparation
 
-In this section, we will be covering:
-- Setting up Portkey wallet
-    1. Create a Portkey Wallet
-    2. Sign up
-    3. Fund the Wallet with Testnet Tokens
-- Development Environment
-    - Github Codespace, or
-    - Local Development
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
