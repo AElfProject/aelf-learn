@@ -1,5 +1,6 @@
 ---
 title: Token Symbol Market
+description: Platform to create tokens and NFTs on aelf.
 sidebar_position: 3
 ---
 

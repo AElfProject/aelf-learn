@@ -1,5 +1,6 @@
 ---
 title: Portkey
+description: First account abstraction (AA) wallet on aelf.
 sidebar_position: 4
 ---
 
