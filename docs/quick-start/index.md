@@ -4,12 +4,12 @@ sidebar_position: 1
 ---
 # Quick Start
 
-## Introduction
+## 1. Introduction
 
 This documentation will guide you on how to develop the aelf smart contract, and it uses the HelloWorldContract as an example.
 With the concepts presented in this article, you will be able to create your own basic contract.
 
-## Setting Up Your Development Environment
+## 2. Setting Up Your Development Environment
 
 The easiest way to get started is to use this repository template: https://github.com/yongenaelf/aelf-devcontainer-template.
 
@@ -57,7 +57,7 @@ Wait while the environment loads.
 </TabItem>
 </Tabs>
 
-## Starting Your Smart Contract Project
+## 3. Starting Your Smart Contract Project
 
 In VS Code, open a new terminal `Terminal > New Terminal`.
 
@@ -67,7 +67,7 @@ Enter the following command to generate a new project:
 dotnet new aelf -n HelloWorld
 ```
 
-## Adding Your Smart Contract Code
+## 4. Adding Your Smart Contract Code
 
 Now that we understand how a smart contract for aelf is written, suppose we want to modify the default example to implement our own contract logic.
 
@@ -127,7 +127,7 @@ cd src
 dotnet build
 ```
 
-## Preparing for deployment
+## 5. Preparing for deployment
 
 ### Creating Your Wallet
 
@@ -147,6 +147,8 @@ To acquire testnet tokens for covering transaction fees essential for contract d
 <Tabs>
   <TabItem value="Use Command" label="Use Command" default>
 
+#### Get ELF Tokens
+
 Run this command to get token from faucet.
 
 ```
@@ -154,6 +156,8 @@ curl --location 'https://faucet.aelf.dev/api/claim' \
 --header 'Content-Type: application/json' \
 --data '{"walletAddress": "Your wallet address"}'
 ```
+
+#### Get Seed for Token Creation
 
 ```
 curl --location 'https://faucet.aelf.dev/api/claim-seed' \
@@ -171,7 +175,7 @@ Go to this url [https://faucet-ui-preview.vercel.app](https://faucet-ui-preview.
 </TabItem>
 </Tabs>
 
-## Deploying Your Smart Contract
+## 6. Deploying Your Smart Contract
 
 The smart contract needs to be deployed on the chain before users can use it.
 
@@ -185,7 +189,7 @@ Wait about 1-2 minutes. If deployment is successful, it will return the contract
 
 ![result](/img/deploy-result.png)
 
-## Interacting with Your Deployed Smart Contract
+## 7. Interacting with Your Deployed Smart Contract
 
 Using `aelf-command` to call methods on your newly-deployed smart contract.
 
