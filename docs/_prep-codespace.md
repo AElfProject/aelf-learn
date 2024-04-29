@@ -1,3 +1,9 @@
+The easiest way to get started is to use this repository template: https://github.com/yongenaelf/aelf-devcontainer-template.
+
+Click on the `Use this template` button and choose `Create a new repository`.
+
+Type a suitable repository name and click `Create repository`.
+
 Within the GitHub interface, click on `Code`, then choose `Codespaces`.
 
 Click on the plus "+" sign to create a new Codespace.
