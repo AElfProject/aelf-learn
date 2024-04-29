@@ -2,6 +2,7 @@
 title: Quick Start
 sidebar_position: 1
 ---
+
 # Quick Start
 
 ## 1. Introduction
@@ -130,19 +131,19 @@ dotnet build
 
 ### Creating A Wallet
 
-import CreateWallet from '../_create-wallet.md';
+import CreateWallet from '../\_create-wallet.md';
 
 <CreateWallet/>
 
 ### Acquiring Testnet Tokens for Development
 
-import GetTestnetToken from '../_get-testnet-token.md';
+import GetTestnetToken from '../\_get-testnet-token.md';
 
 <GetTestnetToken/>
 
 ## 6. Deploying Your Smart Contract
 
-import DeploySmartContract from '../_deploy-smart-contract.md';
+import DeploySmartContract from '../\_deploy-smart-contract.md';
 
 <DeploySmartContract/>
 
@@ -150,17 +151,16 @@ import DeploySmartContract from '../_deploy-smart-contract.md';
 
 Using `aelf-command` to call methods on your newly-deployed smart contract.
 
-
 First of all, using `Update` method to set message. we run the following command,
 and enter the message argument as `test`. Then `test` will be set into the message variable.
 
 ```bash
-aelf-command send $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e $ENDPOINT Update 
+aelf-command send $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e $ENDPOINT Update
 ```
 
 After that, using `Read` method to retrieve the value previously set for the message variable.
 Then the value should be `test`.
 
 ```bash
-aelf-command call $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e $ENDPOINT Read 
+aelf-command call $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e $ENDPOINT Read
 ```
