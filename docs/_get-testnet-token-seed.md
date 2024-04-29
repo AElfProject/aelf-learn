@@ -1,4 +1,4 @@
-Acquire testnet SEED for creating fungible or non-fungible tokens on aelf testnet.
+To acquire testnet SEED for creating fungible or non-fungible tokens on aelf testnet.
 
 **Get ELF Seed**
 
@@ -8,12 +8,12 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="cli" label="CLI" default>
 
-Run this command to get seed from faucet.
+Run this command to get testnet SEED token from faucet.
 
-```
+```bash
 curl --location 'https://faucet.aelf.dev/api/claim-seed' \
 --header 'Content-Type: application/json' \
---data '{"walletAddress": "Your wallet address"}'
+--data '{"walletAddress": $WALLET_ADDRESS}'
 ```
 
   </TabItem>

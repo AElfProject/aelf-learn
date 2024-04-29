@@ -1,4 +1,4 @@
-Acquire testnet tokens for covering transaction fees essential for contract deployment.
+To deploy smart contracts or execute on-chain transactions on AELF, you'll require testnet ELF tokens.
 
 **Get ELF Tokens**
 
@@ -8,12 +8,12 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="cli" label="CLI" default>
 
-Run this command to get token from faucet.
+Run this command to get testnet ELF token from faucet.
 
-```
+```bash
 curl --location 'https://faucet.aelf.dev/api/claim' \
 --header 'Content-Type: application/json' \
---data '{"walletAddress": "Your wallet address"}'
+--data '{"walletAddress": $WALLET_ADDRESS}'
 ```
 
   </TabItem>

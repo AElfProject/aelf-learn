@@ -1,11 +1,11 @@
-The smart contract needs to be deployed on the chain before users can use it.
+The smart contract needs to be deployed on the chain before users can interact with it.
 
-Run this command to deploy a contract.
+Run the following command to deploy a contract.
 
+```bash
+aelf-deploy -a $WALLET_ADDRESS -p $WALLET_PASSWORD -c $CONTRACT_PATH/$CONTRACT_FILE.dll.patched
 ```
-aelf-deploy -a <Wallet_Address> -p <Wallet_Password> -c <Contract_Path>/<Contract_File>.dll.patched
-```
 
-Wait about 1-2 minutes. If deployment is successful, it will return the contract address.
+Please wait for approximately 1 to 2 minutes. If the deployment is successful, it will provide you with the contract address.
 
 ![result](/img/deploy-result.png)

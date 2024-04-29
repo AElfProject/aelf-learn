@@ -27,7 +27,8 @@ dotnet new aelf -n HelloWorld
 
 ## 4. Adding Your Smart Contract Code
 
-Now that we understand how a smart contract for aelf is written, suppose we want to modify the default example to implement our own contract logic.
+Now that we have a template hello world project, we can customize the template to incorporate our own contract logic.
+Lets start by implementing methods to provide basic functionality for updating and reading a message stored persistently in the contract state.
 
 ```csharp
 using AElf.Sdk.CSharp.State;
@@ -47,12 +48,12 @@ namespace AElf.Contracts.HelloWorld
 The implementation of file `src/HelloWorld.cs` is as follows:
 
 ```csharp
-// other code...
+// contract implementation starts here
 namespace AElf.Contracts.HelloWorld
 {
     public class HelloWorld : HelloWorldContainer.HelloWorldBase
     {
-        // other methods...
+        // A method that updates the contract state, Message with a user input
         // highlight-start
         public override Empty Update(StringValue input)
         {
@@ -64,7 +65,7 @@ namespace AElf.Contracts.HelloWorld
             return new Empty();
         }
 
-        // A method that read the contract state
+        // A method that reads the contract state, Message
         public override StringValue Read(Empty input)
         {
             var value = State.Message.Value;
@@ -78,7 +79,7 @@ namespace AElf.Contracts.HelloWorld
 }
 ```
 
-Try to build the new code:
+Build the new code with the following commands:
 
 ```bash
 cd src
@@ -107,18 +108,18 @@ import DeploySmartContract from '@site/docs/\_deploy-smart-contract.md';
 
 ## 7. Interacting with Your Deployed Smart Contract
 
-Using `aelf-command` to call methods on your newly-deployed smart contract.
+Lets try to call methods on your newly-deployed smart contract using `aelf-command`.
 
-First of all, using `Update` method to set message. we run the following command,
-and enter the message argument as `test`. Then `test` will be set into the message variable.
+Firstly, we will set a message using the `Update` method. Run the following command,
+and enter the message argument as `test`. This will set `test` into the Message contract state.
 
 ```bash
-aelf-command send $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e $ENDPOINT Update
+aelf-command send $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e https://tdvw-test-node.aelf.io Update
 ```
 
-After that, using `Read` method to retrieve the value previously set for the message variable.
-Then the value should be `test`.
+After that, we can use `Read` method to retrieve the value previously set for the Message contract state.
+Running the following command should yield `test`.
 
 ```bash
-aelf-command call $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e $ENDPOINT Read
+aelf-command call $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e https://tdvw-test-node.aelf.io Read
 ```
