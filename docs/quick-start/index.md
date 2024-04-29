@@ -131,19 +131,19 @@ dotnet build
 
 ### Creating A Wallet
 
-import CreateWallet from '../\_create-wallet.md';
+import CreateWallet from '@site/docs/\_create-wallet.md';
 
 <CreateWallet/>
 
 ### Acquiring Testnet Tokens for Development
 
-import GetTestnetToken from '../\_get-testnet-token.md';
+import GetTestnetToken from '@site/docs/\_get-testnet-token.md';
 
 <GetTestnetToken/>
 
 ## 6. Deploying Your Smart Contract
 
-import DeploySmartContract from '../\_deploy-smart-contract.md';
+import DeploySmartContract from '@site/docs/\_deploy-smart-contract.md';
 
 <DeploySmartContract/>
 
