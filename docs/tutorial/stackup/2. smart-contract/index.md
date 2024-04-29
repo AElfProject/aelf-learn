@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Smart contract (Backend)
+# Smart Contract (Backend)
 
 ## Introduction
 
