@@ -129,65 +129,23 @@ dotnet build
 
 ## 5. Preparing for deployment
 
-### Creating Your Wallet
+### Creating A Wallet
 
-To send transactions on the aelf blockchain, you must have a wallet.
+import CreateWallet from '../_create-wallet.md';
 
-Run this command to create aelf wallet.
-
-```
-aelf-command create
-```
+<CreateWallet/>
 
 ### Acquiring Testnet Tokens for Development
 
-Developers can leverage the aelf testnet network available at https://aelf-test-node.aelf.io/ for thorough testing of their smart contracts during the development phase.
-To acquire testnet tokens for covering transaction fees essential for contract deployment.
+import GetTestnetToken from '../_get-testnet-token.md';
 
-<Tabs>
-  <TabItem value="Use Command" label="Use Command" default>
-
-#### Get ELF Tokens
-
-Run this command to get token from faucet.
-
-```
-curl --location 'https://faucet.aelf.dev/api/claim' \
---header 'Content-Type: application/json' \
---data '{"walletAddress": "Your wallet address"}'
-```
-
-#### Get Seed for Token Creation
-
-```
-curl --location 'https://faucet.aelf.dev/api/claim-seed' \
---header 'Content-Type: application/json' \
---data '{"walletAddress": "Your wallet address"}'
-```
-
-</TabItem>
-  <TabItem value="Use GUI" label="Use GUI">
-
-Go to this url [https://faucet-ui-preview.vercel.app](https://faucet-ui-preview.vercel.app). Enter your address and click ``Get Tokens``.
-
-![result](/img/get-token-ui.png)
-
-</TabItem>
-</Tabs>
+<GetTestnetToken/>
 
 ## 6. Deploying Your Smart Contract
 
-The smart contract needs to be deployed on the chain before users can use it.
+import DeploySmartContract from '../_deploy-smart-contract.md';
 
-Run this command to deploy a contract.
-
-```
-aelf-deploy -a <Wallet_Address> -p <Wallet_Password> -c <Contract_Path>/<Contract_File>.dll.patched
-```
-
-Wait about 1-2 minutes. If deployment is successful, it will return the contract address.
-
-![result](/img/deploy-result.png)
+<DeploySmartContract/>
 
 ## 7. Interacting with Your Deployed Smart Contract
 
