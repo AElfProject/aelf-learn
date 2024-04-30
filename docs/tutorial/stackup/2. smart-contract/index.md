@@ -13,7 +13,16 @@ This exercise will guide you through building a **Voting dApp** designed to simu
 Here are the backend functionalities that we will be implementing as shown below:
 
 <p align="center">
-<img src="/img/dapp-overview.png" alt="Portkey Login" width=""/>
+
+```mermaid
+flowchart LR
+    Voting_dApp --> Initialise_DAO_Smart_Contract
+    Voting_dApp --> Join_A_DAO
+    Voting_dApp --> Create_A_Proposal
+    Voting_dApp --> Vote_on_a_Proposal
+    Voting_dApp --> Get_all_Proposals
+```
+
 </p>
 
 <p align="center">Preview of Voting Smart Contract Functionalities</p>
