@@ -27,7 +27,7 @@ flowchart LR
 
 <p align="center">Preview of Voting Smart Contract Functionalities</p>
 
-The first step involves **Initializing the voting smart contrac**t! This initialization process is essential to allow users to interact with the smart contract.
+The first step involves **Initializing the voting smart contract**! This initialization process is essential to allow users to interact with the smart contract.
 
 With the smart contract initialized, users will then be able to engage with the **JoinDAO** function of the smart contract to become official members of the DAO.
 
@@ -38,7 +38,3 @@ As official members of the DAO, users will then be empowered to:
 - **Vote on Proposals** where members are able to cast their votes on various proposals influencing the direction and decisions of the DAO!
 
 Now that you have a better understanding of the functionalities of the Voting dApp that you will be building, we are now ready to set up the project!
-
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />
