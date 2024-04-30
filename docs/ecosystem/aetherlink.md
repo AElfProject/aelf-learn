@@ -60,9 +60,7 @@ input conditions.
 AetherLink VRF operates across multiple nodes, enhancing the decentralization of random number generation and mitigating
 risks associated with a single point of control.
 
-Random number generator code segment:
-
-```csharp
+```csharp title="Random number generator code segment"
 {
     var random = State.ConsensusContract.GetRandomHash.Call(new Int64Value
     {

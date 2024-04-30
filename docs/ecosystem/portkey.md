@@ -14,21 +14,19 @@ The following example demonstrates how to integrate with Portkey wallet using `@
 
 ## 2. Create a sample project using react
 
-In a terminal:
-
-```bash copy
+```bash title="Terminal"
 npm create vite@latest my-app -- --template react-swc-ts
 ```
 
 Enter the project folder.
 
-```bash copy
+```bash title="Terminal"
 cd my-app
 ```
 
 ## 3. Install SDK
 
-```bash copy
+```bash title="Terminal"
 npm install @portkey/detect-provider
 ```
 
@@ -97,7 +95,7 @@ export default App;
 
 ## 5. Start the development server
 
-```bash
+```bash title="Terminal"
 npm run dev
 ```
 

@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
 ---
+
 # Writing the smart contract
 
 Now that we understand how a smart contract for aelf is written, suppose we want to modify the default example to implement our own contract logic.
@@ -13,7 +14,7 @@ Suppose we want to capture the number of calls to the `Update` method.
 
 Edit the file `src/HelloWorldState.cs`:
 
-```csharp
+```csharp title="src/HelloWorldState.cs"
 using AElf.Sdk.CSharp.State;
 
 namespace AElf.Contracts.HelloWorld
@@ -31,7 +32,7 @@ namespace AElf.Contracts.HelloWorld
 
 Edit the file `src/Protobuf/contract/hello_world_contract.proto`:
 
-```protobuf
+```protobuf title="src/Protobuf/contract/hello_world_contract.proto"
 // other code...
 
 service HelloWorld {
@@ -51,7 +52,7 @@ service HelloWorld {
 
 Edit the file `src/HelloWorld.cs` to add the method implementation:
 
-```csharp
+```csharp title="src/HelloWorld.cs"
 // other code...
 namespace AElf.Contracts.HelloWorld
 {
@@ -90,7 +91,7 @@ namespace AElf.Contracts.HelloWorld
 
 Try to build the new code:
 
-```bash
+```bash title="Terminal"
 cd src
 dotnet build
 ```

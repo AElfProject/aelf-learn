@@ -27,7 +27,7 @@ To install locally, first install Dotnet SDK from: https://dotnet.microsoft.com/
 
 After Dotnet SDK is installed, at the command line:
 
-```bash
+```bash title="Terminal"
 dotnet install AELF.ContractTemplates
 ```
 

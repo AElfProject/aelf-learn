@@ -21,7 +21,7 @@ Open your `Terminal`.
 
 Enter the following command to generate a new project:
 
-```bash
+```bash title="Terminal"
 dotnet new aelf -n HelloWorld
 ```
 
@@ -30,7 +30,7 @@ dotnet new aelf -n HelloWorld
 Now that we have a template hello world project, we can customize the template to incorporate our own contract logic.
 Lets start by implementing methods to provide basic functionality for updating and reading a message stored persistently in the contract state.
 
-```csharp
+```csharp title="src/HelloWorldState.cs"
 using AElf.Sdk.CSharp.State;
 
 namespace AElf.Contracts.HelloWorld
@@ -47,7 +47,7 @@ namespace AElf.Contracts.HelloWorld
 
 The implementation of file `src/HelloWorld.cs` is as follows:
 
-```csharp
+```csharp title="src/HelloWorld.cs"
 // contract implementation starts here
 namespace AElf.Contracts.HelloWorld
 {
@@ -81,7 +81,7 @@ namespace AElf.Contracts.HelloWorld
 
 Build the new code with the following commands:
 
-```bash
+```bash title="Terminal"
 cd src
 dotnet build
 ```
@@ -113,13 +113,13 @@ Lets try to call methods on your newly-deployed smart contract using `aelf-comma
 Firstly, we will set a message using the `Update` method. Run the following command,
 and enter the message argument as `test`. This will set `test` into the Message contract state.
 
-```bash
+```bash title="Terminal"
 aelf-command send $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e https://tdvw-test-node.aelf.io Update
 ```
 
 After that, we can use `Read` method to retrieve the value previously set for the Message contract state.
 Running the following command should yield `test`.
 
-```bash
+```bash title="Terminal"
 aelf-command call $CONTRACT_ADDRESS -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e https://tdvw-test-node.aelf.io Read
 ```

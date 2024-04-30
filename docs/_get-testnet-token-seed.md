@@ -10,7 +10,7 @@ import TabItem from '@theme/TabItem';
 
 Run this command to get testnet SEED token from faucet.
 
-```bash
+```bash title="Terminal"
 curl --location 'https://faucet.aelf.dev/api/claim-seed' \
 --header 'Content-Type: application/json' \
 --data '{"walletAddress": $WALLET_ADDRESS}'
