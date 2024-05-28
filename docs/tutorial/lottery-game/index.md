@@ -9,7 +9,7 @@ In this tutorial, you'll delve into creating a simple lottery game powered by th
 
 ## Prerequisites
 
-- [Vote Contract](../../stackup/index.md)
+- [Vote Contract](../stackup/index.md)
 
 ## Topics Covered
 
