@@ -11,9 +11,7 @@ import TabItem from '@theme/TabItem';
 Run this command to get testnet ELF token from faucet.
 
 ```bash title="Terminal"
-curl --location 'https://faucet.aelf.dev/api/claim' \
---header 'Content-Type: application/json' \
---data '{"walletAddress": $WALLET_ADDRESS}'
+curl -X POST "https://faucet.aelf.dev/api/claim?walletAddress=$WALLET_ADDRESS" -H "accept: application/json" -d ""
 ```
 
   </TabItem>

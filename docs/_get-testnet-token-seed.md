@@ -11,9 +11,7 @@ import TabItem from '@theme/TabItem';
 Run this command to get testnet SEED token from faucet.
 
 ```bash title="Terminal"
-curl --location 'https://faucet.aelf.dev/api/claim-seed' \
---header 'Content-Type: application/json' \
---data '{"walletAddress": $WALLET_ADDRESS}'
+curl -X POST "https://faucet.aelf.dev/api/claim-seed?walletAddress=$WALLET_ADDRESS" -H "accept: application/json" -d ""
 ```
 
   </TabItem>
