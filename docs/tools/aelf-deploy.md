@@ -1,5 +1,5 @@
 ---
-title: Protobuf Extension
+title: aelf Deploy Tool
 sidebar_position: 3
 ---
 
@@ -27,15 +27,15 @@ aelf-deploy -a $WALLET_ADDRESS -p $WALLET_PASSWORD -c $CONTRACT_PATH/$CONTRACT_F
 
 ### Command Options
 
--a: Address of the wallet.
--p: Password of keystore file.  
--c: Location of the contract DLL. 
--u: Update contract (true/false). Default is false.  
--e: Endpoint. Default is 127.0.0.1:8000. 
--i: Include audit (true/false). Default is false (deploy without audit).
--s: Salt, used to calculate contract addresses. If not provided, it defaults to the hash of the contract code. 
--o: Set to false if the deployer is an EOA address. Default is false.
--t: Specify the contract address to update.
--k: Private Key.
+-a: Address of the wallet.  
+-p: Password of keystore file.    
+-c: Location of the contract DLL.   
+-u: Update contract (true/false). Default is false.    
+-e: Endpoint. Default is 127.0.0.1:8000.   
+-i: Include audit (true/false). Default is false (deploy without audit).  
+-s: Salt, used to calculate contract addresses. If not provided, it defaults to the hash of the contract code.   
+-o: Set to false if the deployer is an EOA address. Default is false.  
+-t: Specify the contract address to update.  
+-k: Private Key.  
 
 By following these instructions, you can easily deploy and manage aelf contracts using the aelf-deploy tool.
