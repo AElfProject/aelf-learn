@@ -4,7 +4,7 @@ description: View basic data on aelf chains.
 sidebar_position: 2
 ---
 
-# AELF Block Explorer
+# aelf Block Explorer
 
 ## 1. Introduction
 
