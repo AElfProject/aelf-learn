@@ -1,4 +1,4 @@
-To deploy smart contracts or execute on-chain transactions on AELF, you'll require testnet ELF tokens.
+To deploy smart contracts or execute on-chain transactions on aelf, you'll require testnet ELF tokens.
 
 **Get ELF Tokens**
 

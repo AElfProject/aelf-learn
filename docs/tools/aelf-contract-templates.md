@@ -1,12 +1,12 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 ---
 
-# AELF Contract Templates
+# aelf Contract Templates
 
-AELF Contract Templates is a scaffolding tool designed to allow the developer to start creating smart contracts easily.
+aelf Contract Templates is a scaffolding tool designed to allow the developer to start creating smart contracts easily.
 
-To install AELF Contract Templates:
+To install aelf Contract Templates:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="codespaces" label="Codespaces" default>
 
-AELF Contract Templates is included in the Codespace.
+aelf Contract Templates is included in the Codespace.
 
 import Codespace from '@site/docs/\_prep-codespace.md';
 
