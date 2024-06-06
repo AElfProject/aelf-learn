@@ -8,11 +8,20 @@ import TabItem from '@theme/TabItem';
 <Tabs>
   <TabItem value="cli" label="CLI" default>
 
-Run the following command to get testnet SEED token from faucet. Remember to either export your wallet address or replace $WALLET_ADDRESS with your wallet address.
+Run the following command to get testnet ELF tokens from faucet. Remember to either export your wallet address or replace $WALLET_ADDRESS with your wallet address.
 
 ```bash title="Terminal"
 curl -X POST "https://faucet.aelf.dev/api/claim?walletAddress=$WALLET_ADDRESS" -H "accept: application/json" -d ""
 ```
+To check your wallet's current ELF balance:
+```bash title="Terminal"
+aelf-command call ASh2Wt7nSEmYqnGxPPzp4pnVDU4uhj1XW9Se5VeZcX2UDdyjx -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e https://tdvw-test-node.aelf.io GetBalance
+```
+You will be prompted for the following:  
+Enter the required param <symbol\>: **ELF**  
+Enter the required param <owner\>: **$WALLET_ADDRESS**
+
+You should see the Result displaying your wallet's ELF balance.
 
   </TabItem>
   <TabItem value="web" label="Web" default>
@@ -20,16 +29,6 @@ curl -X POST "https://faucet.aelf.dev/api/claim?walletAddress=$WALLET_ADDRESS" -
 Go to this url [https://faucet-ui-preview.vercel.app](https://faucet-ui-preview.vercel.app). Enter your address and click `Get Tokens`.
 
 ![result](/img/get-token-ui.png)
-
-To check your wallet's current ELF balance:
-```bash title="Terminal"
-aelf-command call ASh2Wt7nSEmYqnGxPPzp4pnVDU4uhj1XW9Se5VeZcX2UDdyjx -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e https://tdvw-test-node.aelf.io GetBalance
-```
-You will be prompted for the following:  
-Enter the required param <symbol>: **ELF**  
-Enter the required param <owner>: **$WALLET_ADDRESS**
-
-You should see the Result displaying your wallet's ELF balance.
 
   </TabItem>
 </Tabs>
