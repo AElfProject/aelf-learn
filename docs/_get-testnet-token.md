@@ -21,5 +21,15 @@ Go to this url [https://faucet-ui-preview.vercel.app](https://faucet-ui-preview.
 
 ![result](/img/get-token-ui.png)
 
+To check your wallet's current ELF balance:
+```bash title="Terminal"
+aelf-command call ASh2Wt7nSEmYqnGxPPzp4pnVDU4uhj1XW9Se5VeZcX2UDdyjx -a $WALLET_ADDRESS -p $WALLET_PASSWORD -e https://tdvw-test-node.aelf.io GetBalance
+```
+You will be prompted for the following:  
+Enter the required param <symbol>: **ELF**  
+Enter the required param <owner>: **$WALLET_ADDRESS**
+
+You should see the Result displaying your wallet's ELF balance.
+
   </TabItem>
 </Tabs>
