@@ -1,4 +1,4 @@
-The easiest way to get started is to use this repository template: https://github.com/AElfProject/aelf-devcontainer.
+The easiest way to get started is to use this repository template: https://github.com/AElfProject/aelf-devcontainer-template.
 
 Click on the `Use this template` button and choose `Create a new repository`.
 
