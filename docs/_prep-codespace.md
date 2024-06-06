@@ -1,4 +1,4 @@
-The easiest way to get started is to use this repository template: https://github.com/yongenaelf/aelf-devcontainer-template.
+The easiest way to get started is to use this repository template: https://github.com/AElfProject/aelf-devcontainer.
 
 Click on the `Use this template` button and choose `Create a new repository`.
 
