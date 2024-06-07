@@ -80,7 +80,7 @@ jobs:
               ref: 'main',
               inputs: {
                 env: 'development',
-                appName: 'playground-service',
+                appName: 'learn',
                 appProject: 'factory',
                 commit_sha: 'sha-${{ steps.vars.outputs.short_sha }}',
               }
