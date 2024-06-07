@@ -19,10 +19,7 @@ jobs:
     name: Build and Push Docker image to Docker Hub
     runs-on: ubuntu-latest
     permissions:
-      packages: write
       contents: read
-      attestations: write
-      id-token: write
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
@@ -64,13 +61,6 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-      
-      - name: Generate artifact attestation
-        uses: actions/attest-build-provenance@v1
-        with:
-          subject-name: ${{ secrets.DOCKER_USERNAME }}/${{ github.event.repository.name }}
-          subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true
       
       - name: Set short git commit SHA
         id: vars
