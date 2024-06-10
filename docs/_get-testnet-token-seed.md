@@ -17,7 +17,7 @@ curl -X POST "https://faucet.aelf.dev/api/claim-seed?walletAddress=$WALLET_ADDRE
   </TabItem>
   <TabItem value="web" label="Web" default>
 
-Go to this url [https://faucet-ui-preview.vercel.app](https://faucet-ui-preview.vercel.app). Click on the dropdown to select "Token Seed". Enter your address and click `Get Seed`.
+Go to this url [https://faucet-ui.aelf.dev](https://faucet-ui.aelf.dev). Click on the dropdown to select "Token Seed". Enter your address and click `Get Seed`.
 
 ![result](/img/get-testnet-token-seed.png)
 
