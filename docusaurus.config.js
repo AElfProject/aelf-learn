@@ -9,6 +9,7 @@ const config = {
   title: "aelf docs",
   tagline: "aelf documentation",
   favicon: "img/favicon.ico",
+  trailingSlash: true,
 
   // Set the production url of your site here
   url: "https://learn.aelf.dev",
@@ -39,7 +40,7 @@ const config = {
           customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: 'G-8DBGWWDN7W',
+          trackingID: "G-8DBGWWDN7W",
           anonymizeIP: true,
         },
       }),
