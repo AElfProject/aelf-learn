@@ -11,6 +11,9 @@ The SimpleDAO smart contract is designed to facilitate decentralized autonomous 
 
 ## 2. Setting up
 
+**Prerequisite**:  
+Install [aelf Contract Templates](index.md) to continue.
+
 To spin up the SimpleDAO smart contract template project, use the following command:
 ```bash title="Terminal"
 dotnet new aelf-simple-dao -n $DAO_NAME
