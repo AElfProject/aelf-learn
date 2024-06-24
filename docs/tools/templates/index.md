@@ -33,3 +33,7 @@ dotnet install AELF.ContractTemplates
 
   </TabItem>
 </Tabs>
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
