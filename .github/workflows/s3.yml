@@ -2,6 +2,8 @@ name: Deploy to S3
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
 
 jobs:
 
@@ -11,12 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
+    - uses: pnpm/action-setup@v4
+      name: Install pnpm
       with:
-        node-version: 18
-        cache: 'npm'
-    - run: npm install
-    - run: npm run build
+        version: 9
+        run_install: false
+
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install
+
+    - name: Build
+      run: pnpm run build
     
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v2
